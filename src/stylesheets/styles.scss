@@ -83,6 +83,8 @@ main {
     .word-count {
       display: flex;
       flex-wrap: wrap;
+      background-image: url('https://www.sccpre.cat/mypng/detail/26-266187_day-owl-logo-owl-icon-in-salmon-owl.png');
+      background-position: center;
       align-items: baseline;
       padding: 5px;
       overflow-y: scroll;
@@ -93,6 +95,9 @@ main {
         span {
           display: none;
         }
+      }
+      #top-word {
+        color: $indigo;
       }
     }
   }
