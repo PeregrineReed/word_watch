@@ -13,7 +13,6 @@ const postWord = async (word) => {
 }
 
 const getWord = async () => {
-  console.log('get')
   let topWord = await fetch('https://wordwatch-api.herokuapp.com/api/v1/top_word');
   let results = await topWord.json();
   return results;
@@ -37,7 +36,6 @@ $(document).ready(() => {
     const tag = $('.words');
     const input = tag[0].value
     const array = input.split(' ');
-    console.log(array);
     array.map(async (word) => {
       postWord(word);
     });
