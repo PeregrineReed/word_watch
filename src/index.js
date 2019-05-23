@@ -39,10 +39,12 @@ $(document).ready(() => {
     array.map(async (word) => {
       postWord(word);
     });
-    if (array.length === 1) {
+    if (array.length === 1 && array[0] !== "") {
       $('.submit-msg').text(array[0] + ' added!');
-    } else {
+    } else if (array.length > 1) {
       $('.submit-msg').text('words added!');
+    } else {
+      $('.submit-msg').text('Gotta add some words!');
     }
     setTimeout(function() {
         $('.submit-msg').text('')
